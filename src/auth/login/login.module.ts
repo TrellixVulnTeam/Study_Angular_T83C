@@ -1,29 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-import { Router, RouterModule, Routes } from '@angular/router';
-import { AngularMaterialModule } from 'src/angular-material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { LoginComponent } from "./login/login.component";
+import { Router, RouterModule, Routes } from "@angular/router";
+import { AngularMaterialModule } from "src/angular-material.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 const routes: Routes = [
   {
-    path:'login',
-    component: LoginComponent
-  }
+    path: "login",
+    component: LoginComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [
-    LoginComponent
-  ],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     AngularMaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class LoginModule { }
+export class LoginModule {}
